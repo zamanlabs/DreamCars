@@ -134,3 +134,59 @@ section {
   height: 3px;
   background: linear-gradient(to right, #1a237e, #ff3d00);
 }
+
+/* Mobile Optimization */
+@media (max-width: 767px) {
+  section {
+    padding: 3rem 0;
+  }
+  
+  .section-title {
+    margin-bottom: 2rem;
+  }
+  
+  .section-title h2 {
+    font-size: 1.75rem;
+  }
+  
+  .card {
+    padding: 1em;
+  }
+  
+  /* Improve touch targets for mobile */
+  button, a, .nav-link {
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Fix overflow issues on mobile */
+  .container {
+    overflow-x: hidden;
+  }
+  
+  /* Improve form elements on mobile */
+  input, select, textarea {
+    font-size: 16px !important; /* Prevents iOS zoom on focus */
+  }
+}
+
+/* Tablet Optimization */
+@media (min-width: 768px) and (max-width: 1023px) {
+  section {
+    padding: 4rem 0;
+  }
+}
+
+/* Fix for mobile nav menu */
+.navbar-collapse.show {
+  max-height: calc(100vh - 70px);
+  overflow-y: auto;
+}
+
+/* Improve mobile scrolling */
+html, body {
+  overflow-x: hidden;
+}

@@ -103,22 +103,22 @@ const FeaturedCars = () => {
     : carData.filter(car => car.category === filter);
 
   return (
-    <section id="cars" className="py-16 bg-white">
+    <section id="cars" className="py-12 md:py-16 bg-white">
       <Container>
         <div className="section-title">
-          <h2 className="text-4xl font-bold text-center">Featured Cars</h2>
-          <p className="text-gray-600 text-center max-w-2xl mx-auto mt-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center">Featured Cars</h2>
+          <p className="text-gray-600 text-center max-w-2xl mx-auto mt-4 px-4 md:px-0 text-sm md:text-base">
             Explore our hand-picked selection of premium vehicles, each one representing the 
             pinnacle of automotive excellence.
           </p>
         </div>
         
-        <div className="flex justify-center flex-wrap gap-4 mb-10">
+        <div className="flex justify-center flex-wrap gap-2 md:gap-4 mb-8 md:mb-10 px-2">
           {categories.map(category => (
             <button 
               key={category}
               onClick={() => setFilter(category)}
-              className={`px-6 py-2 rounded-full ${
+              className={`px-3 py-1 md:px-6 md:py-2 rounded-full text-xs md:text-sm ${
                 filter === category 
                   ? 'bg-primary text-white' 
                   : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
@@ -129,20 +129,21 @@ const FeaturedCars = () => {
           ))}
         </div>
         
-        <Row>
+        <Row className="g-4">
           {filteredCars.map((car, index) => (
-            <Col key={car.id} lg={4} md={6} className="mb-4">
+            <Col key={car.id} lg={4} md={6} sm={6} xs={12} className="mb-4">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="h-100"
               >
                 <Card className="border-0 shadow-lg h-100 overflow-hidden">
                   <div className="relative overflow-hidden">
                     <Card.Img 
                       variant="top" 
                       src={car.image} 
-                      className="object-cover h-48 transform hover:scale-110 transition-transform duration-500"
+                      className="object-cover h-40 sm:h-48 transform hover:scale-110 transition-transform duration-500"
                     />
                     {car.new && (
                       <Badge 
@@ -153,38 +154,38 @@ const FeaturedCars = () => {
                       </Badge>
                     )}
                   </div>
-                  <Card.Body>
+                  <Card.Body className="p-3 md:p-4">
                     <div className="flex justify-between items-center mb-2">
                       <Badge bg="secondary" className="text-xs">{car.category}</Badge>
-                      <span className="text-primary font-bold">${car.price.toLocaleString()}</span>
+                      <span className="text-primary font-bold text-sm md:text-base">${car.price.toLocaleString()}</span>
                     </div>
-                    <Card.Title className="text-xl font-bold">{car.name}</Card.Title>
+                    <Card.Title className="text-lg md:text-xl font-bold mb-3">{car.name}</Card.Title>
                     
-                    <div className="grid grid-cols-2 gap-2 my-3 text-sm">
+                    <div className="grid grid-cols-2 gap-2 my-2 md:my-3 text-xs md:text-sm">
                       <div className="flex items-center gap-1">
-                        <div className="w-3 h-3 rounded-full bg-primary"></div>
-                        <span>{car.specs.engine}</span>
+                        <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-primary"></div>
+                        <span className="truncate">{car.specs.engine}</span>
                       </div>
                       <div className="flex items-center gap-1">
-                        <div className="w-3 h-3 rounded-full bg-secondary"></div>
-                        <span>{car.specs.power}</span>
+                        <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-secondary"></div>
+                        <span className="truncate">{car.specs.power}</span>
                       </div>
                       <div className="flex items-center gap-1">
-                        <div className="w-3 h-3 rounded-full bg-primary"></div>
-                        <span>{car.specs.acceleration}</span>
+                        <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-primary"></div>
+                        <span className="truncate">{car.specs.acceleration}</span>
                       </div>
                       <div className="flex items-center gap-1">
-                        <div className="w-3 h-3 rounded-full bg-secondary"></div>
-                        <span>{car.specs.topSpeed}</span>
+                        <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-secondary"></div>
+                        <span className="truncate">{car.specs.topSpeed}</span>
                       </div>
                     </div>
                     
-                    <div className="flex gap-2 mt-4">
-                      <button className="btn-primary flex-1 py-2 text-sm">
+                    <div className="flex gap-2 mt-3 md:mt-4">
+                      <button className="btn-primary flex-1 py-1 md:py-2 text-xs md:text-sm">
                         View Details
                       </button>
-                      <button className="border border-primary text-primary hover:bg-primary hover:text-white transition-colors rounded-md p-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <button className="border border-primary text-primary hover:bg-primary hover:text-white transition-colors rounded-md p-1 md:p-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 md:h-5 md:w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                         </svg>
                       </button>
@@ -196,8 +197,8 @@ const FeaturedCars = () => {
           ))}
         </Row>
         
-        <div className="text-center mt-8">
-          <button className="btn-secondary">
+        <div className="text-center mt-6 md:mt-8">
+          <button className="btn-secondary text-sm md:text-base py-2 px-4 md:py-2 md:px-6">
             View All Cars
           </button>
         </div>

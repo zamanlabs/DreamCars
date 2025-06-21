@@ -51,16 +51,16 @@ const ContactForm = () => {
   ];
 
   return (
-    <section id="contact" className="py-16 bg-white">
+    <section id="contact" className="py-12 md:py-16 bg-white">
       <Container>
         <div className="section-title">
-          <h2 className="text-4xl font-bold text-center">Contact Us</h2>
-          <p className="text-gray-600 text-center max-w-2xl mx-auto mt-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center">Contact Us</h2>
+          <p className="text-gray-600 text-center max-w-2xl mx-auto mt-4 px-4 md:px-0 text-sm md:text-base">
             Have questions or ready to find your dream car? Our team is here to help you every step of the way.
           </p>
         </div>
         
-        <Row className="mt-10">
+        <Row className="mt-6 md:mt-10">
           <Col lg={6} className="mb-5 mb-lg-0">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -68,60 +68,60 @@ const ContactForm = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <div className="bg-primary/5 p-8 rounded-2xl h-100">
-                <h3 className="text-2xl font-bold mb-6">Get In Touch</h3>
+              <div className="bg-primary/5 p-4 md:p-8 rounded-2xl h-100">
+                <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6">Get In Touch</h3>
                 
-                <div className="flex items-center mb-6">
-                  <div className="bg-primary/10 rounded-full p-3 mr-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="flex items-center mb-4 md:mb-6">
+                  <div className="bg-primary/10 rounded-full p-2 md:p-3 mr-3 md:mr-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 md:h-6 md:w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-bold text-lg">Phone</h4>
-                    <p className="text-gray-700">(555) 123-4567</p>
+                    <h4 className="font-bold text-base md:text-lg">Phone</h4>
+                    <p className="text-gray-700 text-sm md:text-base">(555) 123-4567</p>
                   </div>
                 </div>
                 
-                <div className="flex items-center mb-6">
-                  <div className="bg-primary/10 rounded-full p-3 mr-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="flex items-center mb-4 md:mb-6">
+                  <div className="bg-primary/10 rounded-full p-2 md:p-3 mr-3 md:mr-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 md:h-6 md:w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-bold text-lg">Email</h4>
-                    <p className="text-gray-700">info@dreamcars.com</p>
+                    <h4 className="font-bold text-base md:text-lg">Email</h4>
+                    <p className="text-gray-700 text-sm md:text-base">info@dreamcars.com</p>
                   </div>
                 </div>
                 
-                <div className="flex items-center mb-6">
-                  <div className="bg-primary/10 rounded-full p-3 mr-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="flex items-center mb-4 md:mb-6">
+                  <div className="bg-primary/10 rounded-full p-2 md:p-3 mr-3 md:mr-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 md:h-6 md:w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-bold text-lg">Location</h4>
-                    <p className="text-gray-700">123 Luxury Lane, Carville, CA 90210</p>
+                    <h4 className="font-bold text-base md:text-lg">Location</h4>
+                    <p className="text-gray-700 text-sm md:text-base">123 Luxury Lane, Carville, CA 90210</p>
                   </div>
                 </div>
                 
                 <div className="flex items-center">
-                  <div className="bg-primary/10 rounded-full p-3 mr-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <div className="bg-primary/10 rounded-full p-2 md:p-3 mr-3 md:mr-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 md:h-6 md:w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-bold text-lg">Business Hours</h4>
-                    <p className="text-gray-700">Mon - Sat: 9AM - 7PM</p>
-                    <p className="text-gray-700">Sunday: 11AM - 5PM</p>
+                    <h4 className="font-bold text-base md:text-lg">Business Hours</h4>
+                    <p className="text-gray-700 text-sm md:text-base">Mon - Sat: 9AM - 7PM</p>
+                    <p className="text-gray-700 text-sm md:text-base">Sunday: 11AM - 5PM</p>
                   </div>
                 </div>
                 
-                <div className="flex gap-4 mt-8">
+                <div className="flex gap-3 md:gap-4 mt-6 md:mt-8 justify-center md:justify-start">
                   <a href="#" className="bg-primary text-white p-2 rounded-full hover:bg-primary/90 transition-colors">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
@@ -149,23 +149,23 @@ const ContactForm = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <div className="bg-white shadow-lg rounded-2xl p-8">
+              <div className="bg-white shadow-lg rounded-2xl p-4 md:p-8">
                 {submitted ? (
                   <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    className="text-center py-10"
+                    className="text-center py-6 md:py-10"
                   >
-                    <div className="text-6xl mb-4 text-green-500">✓</div>
-                    <h3 className="text-2xl font-bold mb-2">Thank You!</h3>
-                    <p className="text-gray-700">
+                    <div className="text-5xl md:text-6xl mb-4 text-green-500">✓</div>
+                    <h3 className="text-xl md:text-2xl font-bold mb-2">Thank You!</h3>
+                    <p className="text-gray-700 text-sm md:text-base">
                       Your message has been received. Our team will contact you shortly!
                     </p>
                   </motion.div>
                 ) : (
                   <Form onSubmit={handleSubmit}>
-                    <Form.Group className="mb-4">
-                      <Form.Label className="font-medium">Full Name</Form.Label>
+                    <Form.Group className="mb-3 md:mb-4">
+                      <Form.Label className="font-medium text-sm md:text-base">Full Name</Form.Label>
                       <Form.Control
                         type="text"
                         name="name"
@@ -173,14 +173,14 @@ const ContactForm = () => {
                         onChange={handleInputChange}
                         placeholder="Enter your full name"
                         required
-                        className="py-3 border-gray-300 rounded-md"
+                        className="py-2 md:py-3 border-gray-300 rounded-md"
                       />
                     </Form.Group>
                     
                     <Row>
-                      <Col md={6}>
-                        <Form.Group className="mb-4">
-                          <Form.Label className="font-medium">Email</Form.Label>
+                      <Col md={6} className="mb-3 md:mb-0">
+                        <Form.Group className="mb-3 md:mb-4">
+                          <Form.Label className="font-medium text-sm md:text-base">Email</Form.Label>
                           <Form.Control
                             type="email"
                             name="email"
@@ -188,32 +188,32 @@ const ContactForm = () => {
                             onChange={handleInputChange}
                             placeholder="Enter your email"
                             required
-                            className="py-3 border-gray-300 rounded-md"
+                            className="py-2 md:py-3 border-gray-300 rounded-md"
                           />
                         </Form.Group>
                       </Col>
                       <Col md={6}>
-                        <Form.Group className="mb-4">
-                          <Form.Label className="font-medium">Phone</Form.Label>
+                        <Form.Group className="mb-3 md:mb-4">
+                          <Form.Label className="font-medium text-sm md:text-base">Phone</Form.Label>
                           <Form.Control
                             type="tel"
                             name="phone"
                             value={formData.phone}
                             onChange={handleInputChange}
                             placeholder="Enter your phone number"
-                            className="py-3 border-gray-300 rounded-md"
+                            className="py-2 md:py-3 border-gray-300 rounded-md"
                           />
                         </Form.Group>
                       </Col>
                     </Row>
                     
-                    <Form.Group className="mb-4">
-                      <Form.Label className="font-medium">Area of Interest</Form.Label>
+                    <Form.Group className="mb-3 md:mb-4">
+                      <Form.Label className="font-medium text-sm md:text-base">Area of Interest</Form.Label>
                       <Form.Select
                         name="interest"
                         value={formData.interest}
                         onChange={handleInputChange}
-                        className="py-3 border-gray-300 rounded-md"
+                        className="py-2 md:py-3 border-gray-300 rounded-md"
                       >
                         <option value="">Select your area of interest</option>
                         {interestOptions.map((option, index) => (
@@ -222,22 +222,22 @@ const ContactForm = () => {
                       </Form.Select>
                     </Form.Group>
                     
-                    <Form.Group className="mb-4">
-                      <Form.Label className="font-medium">Message</Form.Label>
+                    <Form.Group className="mb-3 md:mb-4">
+                      <Form.Label className="font-medium text-sm md:text-base">Message</Form.Label>
                       <Form.Control
                         as="textarea"
                         name="message"
                         value={formData.message}
                         onChange={handleInputChange}
                         placeholder="How can we help you?"
-                        rows={4}
+                        rows={3}
                         className="border-gray-300 rounded-md"
                       />
                     </Form.Group>
                     
                     <Button 
                       type="submit" 
-                      className="btn-primary w-100 py-3"
+                      className="btn-primary w-100 py-2 md:py-3 text-sm md:text-base"
                     >
                       Send Message
                     </Button>
